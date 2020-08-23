@@ -15,14 +15,6 @@ describe('navigation', () => {
     })
     cy.findByLabelText(/view project "Color"/i).assertRoute('/projects')
   })
-  it('link to instagram works', () => {
-    cy.get('nav').within(() => {
-      cy.findByText(/instagram/i)
-        .click({ force: true })
-        .waitForRouteChange()
-    })
-    cy.assertRoute('/instagram')
-  })
   it('link to about works', () => {
     cy.get('nav').within(() => {
       cy.findByText(/about/i).click({ force: true }).waitForRouteChange()
